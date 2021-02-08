@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.mainWidth {
+  width: 1248px;
+  margin:auto;
+}
+
+.slicedImg
+{
+  position: relative;
+}
+
+.slicedImg:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 70px 70px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.slicedImg:after
+{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 70px 70px;
+  border-color: transparent transparent #fff transparent;
+}

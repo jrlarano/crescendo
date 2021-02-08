@@ -12,10 +12,10 @@ import {
   Paragraph,
   Text
 } from 'grommet';
-import {isMobile} from 'react-device-detect'
 import Ingredient from './ingredient'
 import Direction from './direction'
 import {Link} from 'react-router-dom'
+import { useMediaQuery } from 'react-responsive';
 
 export default function RecipeCard({id, data}) {
   const [open, setOpen] = React.useState(false);
@@ -24,6 +24,8 @@ export default function RecipeCard({id, data}) {
   useEffect(()=> {
     getSpecials()
   }, [])
+  
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   const ExpandButton = ({ ...rest }) => {
     const label = open ? "Show less" : "Show more"
@@ -40,24 +42,6 @@ export default function RecipeCard({id, data}) {
     const data = await axios.get('/specials')
     console.log("These are the Specials::::", data.data)
     setSpecials(data?.data ?? [])
-  }
-
-  const theme = {
-    global: {
-      font: {
-        family: `Comic Sans MS, -apple-system,
-           BlinkMacSystemFont, 
-           "Segoe UI", 
-           Roboto`,
-      },
-    },
-    card: {
-      elevation: 'none',
-      background: 'light-2',
-      footer: {
-        pad: 'medium',
-      },
-    },
   }
 
   return (
