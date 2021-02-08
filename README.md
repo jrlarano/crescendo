@@ -2,7 +2,7 @@
 Node version: v14.15.4\
   Dependeny package "Colorette" latest build does not support node version 13 and below.
   
-### `npm install
+### `npm install`
 
 ##
 Test 1: [http://localhost:3000/test1](http://localhost:3000/test1)
