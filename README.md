@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+## Installation Note
+Node version: v14.15.4
+  Dependeny package "Colorette" latest build does not support node version 13 and below.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##
+Test 1: [http://localhost:3000/test1](http://localhost:3000/test1)
+Test 2: [http://localhost:3000/test2](http://localhost:3000/test2)
 
 ## Available Scripts
 
