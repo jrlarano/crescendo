@@ -1,13 +1,13 @@
 import React from 'react'
 import { Box, Carousel, Image, Text, Heading } from 'grommet'
 
-export default function Banner1() {
+export default function Banner1({isMobile}) {
 
   return (
       <Box align="center" width="100%">
           <Carousel fill>
             {/* <Image fit="cover" src={`${process.env.PUBLIC_URL}/images/banner1.jpg`} /> */}
-            <Box height="450px" background={`url(${process.env.PUBLIC_URL}/images/banner1.jpg)`}>
+            <Box height="450px" pad="medium" background={isMobile? '#1b9cf8' :`url(${process.env.PUBLIC_URL}/images/banner1.jpg)`}>
               <Box
                 className="mainWidth"
                 style={{

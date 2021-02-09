@@ -46,7 +46,7 @@ export default function Test2() {
     <Grommet theme={grommet}>
       <Header background="light-1" width="100%" style={{borderBottom:"16px solid #001254"}}>
         <Header background="light-1" className="mainWidth">
-          <Box direction="row" align="center" gap="small">
+          <Box direction="row" align="center" gap="small" margin={isMobile? "auto":""}>
             <Image
               height="120px"
               src={`${process.env.PUBLIC_URL}/images/logo.png`}
@@ -56,11 +56,17 @@ export default function Test2() {
             {responsive =>
               responsive === 'small' ? (
                 <Menu
-                  label="Click me"
+                  style={{
+                    position:"absolute",
+                    right:"0"
+                  }}
+                  label="Menu"
                   items={[
-                    { label: 'This is', onClick: () => {} },
-                    { label: 'The Menu', onClick: () => {} },
-                    { label: 'Component', onClick: () => {} },
+                    { label: 'Home', onClick: () => {} },
+                    { label: 'About Us', onClick: () => {} },
+                    { label: 'Insights', onClick: () => {} },
+                    { label: 'Events', onClick: () => {} },
+                    { label: 'Contact Us', onClick: () => {} },
                   ]}
                 />
               ) : (
@@ -76,7 +82,7 @@ export default function Test2() {
           </ResponsiveContext.Consumer>
           </Header>
       </Header>
-      <Banner1 />
+      <Banner1 isMobile={isMobile}/>
       <Box
         style={{
           paddingBottom:"20px",
